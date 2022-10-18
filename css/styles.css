@@ -204,6 +204,8 @@ body {
   color: var(--accent-color);
 }
 
+/* icons */
+
 .contacts-icon {
   fill: currentColor;
 }
