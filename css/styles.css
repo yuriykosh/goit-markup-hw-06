@@ -419,8 +419,21 @@ body {
 
   width: 100%;
 
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+
+  color: var(--text-color);
+}
+
+.form-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .form-input::placeholder {
@@ -429,6 +442,30 @@ body {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+
+  color: var(--text-color);
+}
+
+.input-icon > .icon {
+  fill: currentColor;
+}
+
+.form-field:focus-within > .input-icon {
+  color: var(--accent-color);
 }
 
 .form-input.textarea {
