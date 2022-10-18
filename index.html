@@ -88,18 +88,22 @@
           </button>
         </div>
 
+        <!-- MODAL SCREEN -->
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
+            <!-- modal close buttom -->
             <button class="close-button button" data-modal-close>
               <svg class="close-button-icon">
                 <use href="./images/sprite.svg#close"></use>
               </svg>
             </button>
 
-            <form class="modal-form">
+            <!-- modal form -->
+            <form class="modal-form js-speaker-form">
               <h4 class="form-title">Залиште свої дані, ми вам передзвонимо</h4>
 
               <ul class="main-info list">
+                <!-- name field -->
                 <li>
                   <label class="form-field">
                     <span class="form-label">Ім'я</span>
@@ -119,6 +123,7 @@
                   </label>
                 </li>
 
+                <!-- telephone field -->
                 <li>
                   <label class="form-field">
                     <span class="form-label">Телефон</span>
@@ -138,6 +143,7 @@
                   </label>
                 </li>
 
+                <!-- mail field -->
                 <li>
                   <label class="form-field">
                     <span class="form-label">Пошта</span>
@@ -158,7 +164,8 @@
                 </li>
               </ul>
 
-              <label class="form-field textarea">
+              <!-- comment field -->
+              <label class="form-field comment">
                 <span class="form-label">Коментар</span>
                 <textarea
                   name="comment"
@@ -168,14 +175,25 @@
                 ></textarea>
               </label>
 
-              <label class="form-field checkbox">
-                <input type="checkbox" name="policy" />
-                <span class="form-label-checkbox"
+              <!-- policy field -->
+              <label class="form-field policy">
+                <input
+                  type="checkbox"
+                  class="checkbox visually-hidden"
+                  name="policy"
+                />
+                <span class="checkbox-icon">
+                  <svg class="icon" width="16" height="15">
+                    <use href="./images/sprite.svg#check"></use>
+                  </svg>
+                </span>
+                <span class="checkbox-label"
                   >Погоджуюся з розсилкою та приймаю
                   <a class="link" href="/">Умови договору</a></span
                 >
               </label>
 
+              <!-- submit button -->
               <button type="submit" class="form-button">Відправити</button>
             </form>
           </div>
