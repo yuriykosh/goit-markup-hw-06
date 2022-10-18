@@ -362,64 +362,114 @@
 
     <footer class="footer">
       <div class="container">
-        <div>
-          <a class="brand-logo link" href="index.html"
-            ><span class="logo-accent-color">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-item">
-                <a
-                  class="address-link location-link link"
-                  href="https://goo.gl/maps/HwtQE2mgHwNeuMtz8"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer-left">
+          <div>
+            <a class="brand-logo link" href="index.html"
+              ><span class="logo-accent-color">Web</span>Studio</a
+            >
+            <address class="address">
+              <ul class="address-list list">
+                <li class="address-item">
+                  <a
+                    class="address-link location-link link"
+                    href="https://goo.gl/maps/HwtQE2mgHwNeuMtz8"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+
+                <li class="address-item">
+                  <a class="address-link link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+
+                <li class="address-item">
+                  <a class="address-link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer-socials">
+            <h3 class="footer-title">Приєднуйтесь</h3>
+            <ul class="footer-socials-list list">
+              <li class="footer-socials-item">
+                <a class="footer-socials-link link" href=""
+                  ><svg class="footer-socials-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use></svg
+                ></a>
               </li>
-              <li class="address-item">
-                <a class="address-link link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+
+              <li class="footer-socials-item">
+                <a class="footer-socials-link" href=""
+                  ><svg class="footer-socials-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use></svg
+                ></a>
               </li>
-              <li class="address-item">
-                <a class="address-link link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+
+              <li class="footer-socials-item">
+                <a class="footer-socials-link" href=""
+                  ><svg class="footer-socials-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use></svg
+                ></a>
+              </li>
+
+              <li class="footer-socials-item">
+                <a class="footer-socials-link" href=""
+                  ><svg class="footer-socials-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use></svg
+                ></a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="footer-socials">
-          <h3 class="footer-socials-title">Приєднуйтесь</h3>
-          <ul class="footer-socials-list list">
-            <li class="footer-socials-item">
-              <a class="footer-socials-link link" href=""
-                ><svg class="footer-socials-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#instagram"></use></svg
-              ></a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href=""
-                ><svg class="footer-socials-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#twitter"></use></svg
-              ></a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href=""
-                ><svg class="footer-socials-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#facebook"></use></svg
-              ></a>
-            </li>
-            <li class="footer-socials-item">
-              <a class="footer-socials-link" href=""
-                ><svg class="footer-socials-icon" width="20" height="20">
-                  <use href="./images/sprite.svg#linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
+
+        <div>
+          <h3 class="footer-title">Підпишіться на розсилку</h3>
+
+          <form class="form js-speaker-form">
+            <label class="form-field">
+              <input
+                type="email"
+                class="form-input"
+                name="mail"
+                placeholder="E-mail"
+              />
+            </label>
+
+            <button type="submit" class="form-button">
+              Підписатися
+              <svg class="button-icon" width="24" height="24">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+
+    <!-- Modal On/Off Script -->
+    <script src="./js/modal.js"></script>
+
+    <!-- Form Testing Script -->
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
