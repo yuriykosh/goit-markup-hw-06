@@ -87,6 +87,7 @@
             Замовити послугу
           </button>
         </div>
+
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
             <button class="close-button button" data-modal-close>
@@ -94,6 +95,66 @@
                 <use href="./images/sprite.svg#close"></use>
               </svg>
             </button>
+
+            <form class="modal-form">
+              <h4 class="form-title">Залиште свої дані, ми вам передзвонимо</h4>
+
+              <ul class="main-info list">
+                <li>
+                  <label class="form-field">
+                    <span class="form-label">Ім'я</span>
+                    <input
+                      type="text"
+                      class="form-input"
+                      name="name"
+                      placeholder=" "
+                    />
+                  </label>
+                </li>
+                <li>
+                  <label class="form-field">
+                    <span class="form-label">Телефон</span>
+                    <input
+                      type="tel"
+                      class="form-input"
+                      name="telephone"
+                      placeholder=" "
+                    />
+                  </label>
+                </li>
+                <li>
+                  <label class="form-field">
+                    <span class="form-label">Пошта</span>
+                    <input
+                      type="email"
+                      class="form-input"
+                      name="mail"
+                      placeholder=" "
+                    />
+                  </label>
+                </li>
+              </ul>
+
+              <label class="form-field textarea">
+                <span class="form-label">Коментар</span>
+                <textarea
+                  name="comment"
+                  class="form-input textarea"
+                  rows="10"
+                  placeholder="Введіть текст"
+                ></textarea>
+              </label>
+
+              <label class="form-field checkbox">
+                <input type="checkbox" name="policy" />
+                <span class="form-label-checkbox"
+                  >Погоджуюся з розсилкою та приймаю
+                  <a class="link" href="/">Умови договору</a></span
+                >
+              </label>
+
+              <button type="submit" class="form-button">Відправити</button>
+            </form>
           </div>
         </div>
       </section>
