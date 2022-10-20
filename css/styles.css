@@ -328,7 +328,8 @@ body {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transition-dur-and-func),
-    opacity var(--transition-dur-and-func);
+    opacity var(--transition-dur-and-func),
+    visibility var(--transition-dur-and-func);
 
   padding: 40px;
   min-height: 581px;
@@ -383,7 +384,7 @@ body {
 .form-title {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 
   font-weight: 700;
   font-size: 20px;
@@ -395,9 +396,9 @@ body {
 .modal-form .main-info {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 10px;
 
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 /* fields */
@@ -410,10 +411,9 @@ body {
 /* label */
 
 .form-label {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  transform: translateY(-100%);
+  display: block;
+  text-align: start;
+  margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.166;
@@ -463,8 +463,6 @@ body {
   top: 50%;
   left: 12px;
 
-  transform: translateY(-50%);
-
   transition: color var(--transition-dur-and-func);
 
   display: inline-block;
@@ -472,9 +470,6 @@ body {
   height: 18px;
 
   color: var(--text-color);
-}
-
-.input-icon > .icon {
   fill: currentColor;
 }
 
@@ -490,6 +485,7 @@ body {
 
 .form-input.textarea {
   resize: none;
+  display: block;
 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -515,6 +511,8 @@ body {
   align-items: center;
   width: 16px;
   height: 15px;
+
+  cursor: pointer;
 
   transition: background-color var(--transition-dur-and-func),
     border var(--transition-dur-and-func);
@@ -570,6 +568,8 @@ body {
 
 .form-button:hover,
 .form-button:focus {
+  cursor: pointer;
+
   background-color: #188ce8;
 }
 
@@ -1125,11 +1125,13 @@ body {
 
 .footer .form-button:hover,
 .footer .form-button:focus {
+  cursor: pointer;
+
   background-color: #188ce8;
 }
 
 .footer .button-icon {
-  fill: var(--white-color);
+  fill: currentColor;
 }
 
 /* ================= /FOOTER ================= */ ;
